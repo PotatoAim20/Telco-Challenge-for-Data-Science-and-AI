@@ -1,9 +1,8 @@
 from fastapi import APIRouter
 from app.schemas import PredictRequest
 from app.session import session_store, STATIC_SESSION_ID
-from app.extractor import extract_json, extract_missing_fields, generate_churn_explanation
+from app.extractor import extract_json, generate_churn_explanation
 from app.model import predict_churn
-from app.utils import merge_json, get_missing_fields_json
 
 router = APIRouter()
 
